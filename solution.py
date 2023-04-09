@@ -8,4 +8,4 @@ def solution(x: np.array) -> bool: # Одна или две выборке на 
     # Измените код этой функции
     # Это будет вашим решением
     # Не меняйте название функции и её аргументы
-    return stats.ttest_1samp(x, 300, alternative='greater').pvalue/2 <0.04
+    return stats.ttest_1samp(x, 300).pvalue/2 >0.04 or x.mean() > 300
